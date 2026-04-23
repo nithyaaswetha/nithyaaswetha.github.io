@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script>
+    window.__WEDDING_CONFIG__ = {
+      "couple": {
+        "bride": "Nithyaa Shri",
+        "groom": "Adarsh",
+        "date": "2026-06-07",
+        "venue": "Guruvayur Temple",
+        "whatsapp": "",
+        "hashtag": "#AdarshWedsNithyaa"
+      }, "invite": { "blessing": "", "brideFather": "Mr.Balaji Kumar V", "brideMother": "Mrs.Ponni V", "groomFather": "Mr.Ramadas PT", "groomMother": "Mrs.Bindu Nair", "showGrandparents": false, "brideGF": "", "brideGM": "", "groomGF": "", "groomGM": "", "parentsOrder": "groom_first" }, "events": [], "story": { "show": true, "customHashtag": "", "tags": [] }, "gallery": { "show": true, "layout": "4", "photos": ["https://shaadipath.com/demo-photos/photo1.jpg", "https://shaadipath.com/demo-photos/photo2.jpg", "https://shaadipath.com/demo-photos/photo3.png", "https://shaadipath.com/demo-photos/photo4.png"] }, "thingsToKnow": [], "rsvp": { "mode": "whatsapp", "heading": "Join the Celebration", "subtext": "We have lit the kuthuvillakku, spread the kolam, and saved a seat for you in our mandapam. Come celebrate as we begin this sacred and joyful chapter of our lives.", "btnText": "Yes, I'll be there", "whatsapp": "" }, "music": { "enabled": false, "src": "", "name": "" }, "calendarUrls": { "google": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nithyaa Shri%20weds%20Adarsh&dates=20261212/20261213&location=", "apple": "data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20260607%0ADTEND:20260607%0ASUMMARY:Nithyaa Shri%20weds%20Adarsh%0ALOCATION:%0AEND:VEVENT%0AEND:VCALENDAR" }
+    };
+  </script>
+  <script>
+    (function () {
+      var bride = 'Nithyaa Shri';
+      var groom = 'Adarsh';
+      var date = '12 December 2026';
+      function updatePreloader() {
+        // Names in preloader
+        var n1 = document.querySelector('.pl-n1');
+        var n2 = document.querySelector('.pl-n2');
+        if (n1) n1.textContent = groom;
+        if (n2) n2.textContent = bride;
+        // Names in hero copy
+        var hb = document.querySelector('.hc-bride');
+        var hg = document.querySelector('.hc-groom');
+        if (hb) hb.textContent = groom;
+        if (hg) hg.textContent = bride;
+        // Fallback: replace any leaf text still reading the placeholder names
+        document.querySelectorAll('*').forEach(function (el) {
+          if (el.children.length === 0 && el.textContent.trim() === 'Priya') el.textContent = bride;
+          if (el.children.length === 0 && el.textContent.trim() === 'Arjun') el.textContent = groom;
+        });
+        // Date injection
+        if (date) {
+          var found = false;
+          document.querySelectorAll('*').forEach(function (el) {
+            if (el.children.length === 0) {
+              var txt = el.textContent.trim();
+              if (
+                txt === '14 February 2025' || txt === '14 FEBRUARY 2025' ||
+                el.classList.contains('pre-date') ||
+                el.classList.contains('preloader-date') ||
+                el.classList.contains('pl-date')
+              ) {
+                el.textContent = date;
+                found = true;
+              }
+            }
+          });
+          // No existing date element found — insert one after .pl-names
+          if (!found) {
+            var container = document.querySelector('.pl-names') || document.querySelector('.pl-content');
+            if (container && !container.querySelector('.pl-date-injected')) {
+              var dateEl = document.createElement('span');
+              dateEl.className = 'pl-date-injected';
+              dateEl.textContent = date;
+              dateEl.style.cssText = 'display:block;font-family:"DM Sans",sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(196,152,90,0.75);margin-top:10px;';
+              container.appendChild(dateEl);
+            }
+          }
+        }
+      }
+      updatePreloader();
+      document.addEventListener('DOMContentLoaded', updatePreloader);
+    })();
+  </script><!--<base href="https://pub-1cc0f6e993214be9a36badeeb631f4b6.r2.dev/templates/template05/">-->
+  <base href=".">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title id="page-title">Adarsh &amp; Nithyaa Shri · 07/06/2026</title>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+  <link rel="preload" href="./assets/style.css" as="style">
+  <link rel="preload" href="./assets/script.js" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./assets/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script>
+    if (typeof window.__WEDDING_CONFIG__ !== 'undefined' && window.__WEDDING_CONFIG__) {
+      var WEDDING_CONFIG = window.__WEDDING_CONFIG__;
+    }
+  </script>
+</head>
+
+<body class="">
+
+  <div class="c-ring" id="cRing"></div>
+  <div class="c-dot" id="cDot"></div>
+
+  <audio id="bgMusic" loop="" preload="none">
+    <source src="https://pub-1cc0f6e993214be9a36badeeb631f4b6.r2.dev/templates/template05/assets/song/Template_05.mp3"
+      type="audio/mpeg">
+  </audio>
+  <button class="music-btn playing" id="musicBtn" onclick="toggleMusic()" aria-label="Toggle music">🔔</button>
+
+  <!-- PRELOADER — mandala ring trace -->
+  <div id="preloader" class="preloader li ni away" style="display: none;">
+    <div class="pl-content">
+      <div class="pl-mandala-wrap">
+        <svg class="pl-mandala" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+          <!-- Ring 3 — outer -->
+          <circle class="pl-m-ring pl-m-r3" cx="60" cy="60" r="54" fill="none" stroke="#C8960A" stroke-width="1.2"
+            stroke-linecap="round"></circle>
+          <!-- Ring 2 — mid -->
+          <circle class="pl-m-ring pl-m-r2" cx="60" cy="60" r="40" fill="none" stroke="#4A1E6E" stroke-width="1.0"
+            stroke-linecap="round"></circle>
+          <!-- Ring 1 — inner -->
+          <circle class="pl-m-ring pl-m-r1" cx="60" cy="60" r="26" fill="none" stroke="#C8960A" stroke-width="0.8"
+            stroke-linecap="round"></circle>
+          <!-- 8 petals alternating gold/purple -->
+          <g class="pl-m-petals">
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#C8960A" opacity=".55" transform="rotate(0   60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#4A1E6E" opacity=".50" transform="rotate(45  60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#C8960A" opacity=".55" transform="rotate(90  60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#4A1E6E" opacity=".50" transform="rotate(135 60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#C8960A" opacity=".55" transform="rotate(180 60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#4A1E6E" opacity=".50" transform="rotate(225 60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#C8960A" opacity=".55" transform="rotate(270 60 60)"></ellipse>
+            <ellipse cx="60" cy="14" rx="4" ry="9" fill="#4A1E6E" opacity=".50" transform="rotate(315 60 60)"></ellipse>
+          </g>
+          <!-- Centre dot -->
+          <circle class="pl-m-dot" cx="60" cy="60" r="4" fill="#C8960A" opacity=".80"></circle>
+        </svg>
+      </div>
+      <div class="pl-names" id="plNames">
+        <span class="pl-n1">Adarsh</span>
+        <span class="pl-weds">weds</span>
+        <span class="pl-n2">Nithyaa Shri</span>
+        <span class="pl-date-injected"
+          style="display: block; font-family: &quot;DM Sans&quot;, sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(196, 152, 90, 0.75); margin-top: 10px;">07
+          June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+     HERO — Layered parallax: background · subject(zoom) · foreground(shake)
+     Layer z-order: background(1) · particles(2) · subject(4) · foreground(5) · floats(8) · names(9)
+═══════════════════════════════════════════ -->
+  <div id="heroWrap" class="hero-wrap">
+    <div id="heroPin" class="hero-pin">
+      <!-- Background: static, full bleed, stays fixed during scroll -->
+      <div class="hero-bg-layer" id="heroBgLayer">
+        <img class="hero-bg-img hero-bg-img--desktop" src="./assets/Hero_Background_Desktop.png" alt=""
+          aria-hidden="true">
+        <img class="hero-bg-img hero-bg-img--mobile" src="./assets/Hero_Background_Mobile_v2.png" alt=""
+          aria-hidden="true">
+      </div>
+
+      <div class="hero-particles" id="heroParticles" aria-hidden="true">
+        <div class="hp"
+          style="left: 9.90329%; --dur: 10.4593130304856s; --del: -8.443948501407299s; --dx: -3.84012274484957px; width: 1.5px; height: 1.5px; background: rgb(200, 150, 10); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 66.0396%; --dur: 20.277921303937433s; --del: -0.26079654587861967s; --dx: 1.9561420596285584px; width: 2.5px; height: 2.5px; background: rgb(232, 168, 32); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 61.7477%; --dur: 19.906225917348053s; --del: -1.557323889156458s; --dx: -9.660810897866664px; width: 2.5px; height: 2.5px; background: rgb(200, 150, 10); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 48.4081%; --dur: 14.703387683179898s; --del: -5.3536918473366155s; --dx: -32.22913957558881px; width: 2.5px; height: 2.5px; background: rgb(232, 200, 144); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 3.62456%; --dur: 9.54438490700862s; --del: -11.197332466676805s; --dx: -19.29422419399068px; width: 3.5px; height: 3.5px; background: rgb(232, 168, 32); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 26.2988%; --dur: 14.946025778767705s; --del: -11.466155794572899s; --dx: -18.155757106692473px; width: 2.5px; height: 2.5px; background: rgb(248, 242, 228); opacity: 0;">
+        </div>
+        <div class="hp"
+          style="left: 51.5569%; --dur: 23.559240400133213s; --del: -7.8345793604472656s; --dx: -33.43896159903028px; width: 2.5px; height: 2.5px; background: rgb(232, 168, 32); opacity: 0;">
+        </div>
+      </div>
+
+      <!-- Subject z:4 — temple / main visual -->
+      <div class="hl-subject-wrap" id="hlSubjectWrap">
+        <img id="hlSubjectDesktop" class="hl hl-subject hl-subject--desktop" src="./assets/Hero_subject_Desktop_v2.png"
+          alt="">
+        <img id="hlSubjectMobile" class="hl hl-subject hl-subject--mobile" src="./assets/Hero_subject_Mobile_v2.png"
+          alt="">
+      </div>
+
+      <!-- Foreground z:5 — banana leaves, continuous gentle shake for 3-D depth -->
+      <div class="hl-fg-wrap" id="hlFgWrap">
+        <img id="hlFgDesktop" class="hl hl-fg hl-fg--desktop" src="./assets/Hero_foreground_Desktop.png" alt=""
+          aria-hidden="true">
+        <img id="hlFgMobile" class="hl hl-fg hl-fg--mobile" src="./assets/Hero_foreground_mobile.png" alt=""
+          aria-hidden="true">
+      </div>
+
+      <div class="hero-floats" aria-hidden="true">
+        <img class="fl fall-l" src="./assets/Element 4.png" alt="">
+        <img class="fl fall-r" src="./assets/Element 5.png" alt="">
+      </div>
+      <div id="petalHero" class="petal-canvas"></div>
+      <!-- Rangoli atmospheric orbs -->
+      <div class="rangoli-orb rangoli-orb--1" aria-hidden="true"></div>
+      <div class="rangoli-orb rangoli-orb--2" aria-hidden="true"></div>
+      <div class="rangoli-orb rangoli-orb--3" aria-hidden="true"></div>
+
+      <div id="heroCopy" class="hero-copy">
+        <h1 class="hc-bride">Adarsh</h1>
+        <span class="hc-weds">weds</span>
+        <h1 class="hc-groom">Nithyaa Shri</h1>
+        <!-- Countdown — reads WEDDING_CONFIG.couple.date, falls back 12 Dec 2026 -->
+        <div id="heroCountdown" class="hc-countdown"><span class="hc-cd-unit"><span class="hc-cd-num">235</span><span
+              class="hc-cd-label">Days</span></span><span class="hc-cd-sep">·</span><span class="hc-cd-unit"><span
+              class="hc-cd-num">13</span><span class="hc-cd-label">Hrs</span></span><span
+            class="hc-cd-sep">·</span><span class="hc-cd-unit"><span class="hc-cd-num">26</span><span
+              class="hc-cd-label">Min</span></span><span class="hc-cd-sep">·</span><span class="hc-cd-unit"><span
+              class="hc-cd-num">30</span><span class="hc-cd-label">Sec</span></span></div>
+      </div>
+      <div class="scroll-nudge" id="scrollNudge" style="opacity: 0;">
+        <span>Scroll</span>
+        <div class="sn-line">
+          <div class="sn-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WATER FLOW BRIDGE — seamless water, two swans swim across -->
+  <div class="water-bridge" id="waterBridge" aria-hidden="true">
+
+    <!-- Full purple backdrop -->
+    <div class="wb-sky"></div>
+
+    <!-- ── Horizon glow — golden warmth where sky meets water ── -->
+    <div class="wb-horizon"></div>
+
+    <!-- ── Water surface — full bleed, three tiled wave layers ── -->
+    <div class="wb-water-wrap">
+
+      <!-- Layer 1 back: slowest, darkest — deep water -->
+      <svg class="wb-wave wb-wave--1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 320"
+        preserveAspectRatio="none">
+        <defs>
+          <lineargradient id="wg1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3A1060" stop-opacity="0.0"></stop>
+            <stop offset="18%" stop-color="#3A1060" stop-opacity="0.7"></stop>
+            <stop offset="100%" stop-color="#1E0838" stop-opacity="1.0"></stop>
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,160 C240,100 480,220 720,160 C960,100 1200,220 1440,160 C1680,100 1920,220 2160,160 C2400,100 2640,220 2880,160 L2880,320 L0,320 Z"
+          fill="url(#wg1)"></path>
+      </svg>
+
+      <!-- Layer 2 mid: medium speed — shimmer band -->
+      <svg class="wb-wave wb-wave--2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 280"
+        preserveAspectRatio="none">
+        <defs>
+          <lineargradient id="wg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4A1878" stop-opacity="0.0"></stop>
+            <stop offset="12%" stop-color="#4A1878" stop-opacity="0.55"></stop>
+            <stop offset="100%" stop-color="#220A42" stop-opacity="0.95"></stop>
+          </lineargradient>
+          <!-- subtle golden shimmer at crest -->
+          <lineargradient id="wg2s" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C8960A" stop-opacity="0.18"></stop>
+            <stop offset="8%" stop-color="#C8960A" stop-opacity="0.0"></stop>
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,130 C360,60  720,200 1080,130 C1440,60  1800,200 2160,130 C2520,60  2760,180 2880,130 L2880,280 L0,280 Z"
+          fill="url(#wg2)"></path>
+        <path
+          d="M0,130 C360,60  720,200 1080,130 C1440,60  1800,200 2160,130 C2520,60  2760,180 2880,130 L2880,145 C2760,195 2520,75 2160,145 C1800,215 1440,75 1080,145 C720,215 360,75 0,145 Z"
+          fill="url(#wg2s)"></path>
+      </svg>
+
+      <!-- Layer 3 front: fastest, nearest — surface foam line -->
+      <svg class="wb-wave wb-wave--3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 220"
+        preserveAspectRatio="none">
+        <defs>
+          <lineargradient id="wg3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#5C1E90" stop-opacity="0.0"></stop>
+            <stop offset="10%" stop-color="#5C1E90" stop-opacity="0.5"></stop>
+            <stop offset="100%" stop-color="#2A0C50" stop-opacity="1.0"></stop>
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,100 C180,50  360,150 540,100 C720,50  900,150 1080,100 C1260,50 1440,150 1620,100 C1800,50 1980,150 2160,100 C2340,50 2610,140 2880,100 L2880,220 L0,220 Z"
+          fill="url(#wg3)"></path>
+      </svg>
+
+      <!-- Reflective shimmer streaks on water surface -->
+      <div class="wb-shimmer">
+        <div class="wb-sh wb-sh--1"></div>
+        <div class="wb-sh wb-sh--2"></div>
+        <div class="wb-sh wb-sh--3"></div>
+        <div class="wb-sh wb-sh--4"></div>
+      </div>
+
+      <!-- Ripple rings around swans -->
+      <div class="wb-ripple wb-ripple--l1"></div>
+      <div class="wb-ripple wb-ripple--l2"></div>
+      <div class="wb-ripple wb-ripple--r1"></div>
+      <div class="wb-ripple wb-ripple--r2"></div>
+
+      <!-- Swan 1 — faces RIGHT, starts off-screen left, swims to right -->
+      <div class="wb-swan wb-swan--a" id="wbSwanA">
+        <img src="./assets/Element_7.png" alt="swan" class="wb-swan-img">
+        <div class="wb-swan-wake wb-swan-wake--a"></div>
+      </div>
+
+      <!-- Swan 2 — faces LEFT (mirrored), starts off-screen right, swims to left -->
+      <div class="wb-swan wb-swan--b" id="wbSwanB">
+        <img src="./assets/Element_7.png" alt="swan" class="wb-swan-img wb-swan-img--flip">
+        <div class="wb-swan-wake wb-swan-wake--b"></div>
+      </div>
+
+    </div><!-- /wb-water-wrap -->
+
+    <!-- Soft fade-to-next-section veil at bottom -->
+    <div class="wb-veil-bottom"></div>
+
+  </div>
+
+  <!-- INVITATION -->
+  <section id="invite" class="s-invite">
+
+    <!-- ── Water background — continues from bridge section ── -->
+    <div class="si-water-bg" aria-hidden="true">
+      <div class="si-water-base"></div>
+      <svg class="si-wave si-wave--1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 400"
+        preserveAspectRatio="none">
+        <defs>
+          <lineargradient id="siwg1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3A1060" stop-opacity="0.0"></stop>
+            <stop offset="30%" stop-color="#2E0A50" stop-opacity="0.6"></stop>
+            <stop offset="100%" stop-color="#1A0535" stop-opacity="0.9"></stop>
+          </lineargradient>
+        </defs>
+        <path
+          d="M0,180 C360,100 720,260 1080,180 C1440,100 1800,260 2160,180 C2520,100 2760,240 2880,180 L2880,400 L0,400 Z"
+          fill="url(#siwg1)"></path>
+      </svg>
+      <svg class="si-wave si-wave--2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 360"
+        preserveAspectRatio="none">
+        <defs>
+          <lineargradient id="siwg2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4A1878" stop-opacity="0.0"></stop>
+            <stop offset="20%" stop-color="#3C1268" stop-opacity="0.5"></stop>
+            <stop offset="100%" stop-color="#220A42" stop-opacity="0.85"></stop>
+          </lineargradient>
+        </defs>
+        <path d="M0,150 C480,70 960,230 1440,150 C1920,70 2400,230 2880,150 L2880,360 L0,360 Z" fill="url(#siwg2)">
+        </path>
+      </svg>
+      <div class="si-shimmer">
+        <div class="si-sh si-sh--1"></div>
+        <div class="si-sh si-sh--2"></div>
+        <div class="si-sh si-sh--3"></div>
+        <div class="si-sh si-sh--4"></div>
+        <div class="si-sh si-sh--5"></div>
+      </div>
+      <div class="si-glow"></div>
+    </div>
+
+    <!-- ── Floating lotus flowers ── -->
+    <div class="si-lotuses" aria-hidden="true">
+      <img class="si-lotus si-lotus--1" src="./assets/Element_8.png" alt="">
+      <img class="si-lotus si-lotus--2" src="./assets/Element_8.png" alt="">
+      <img class="si-lotus si-lotus--3" src="./assets/Element_8.png" alt="">
+      <img class="si-lotus si-lotus--4" src="./assets/Element_8.png" alt="">
+      <img class="si-lotus si-lotus--5" src="./assets/Element_8.png" alt="">
+    </div>
+
+    <!-- Banana-flower toran -->
+    <div class="toran"><img src="./assets/Background 4.png" alt="" class="toran-img"></div>
+
+    <div class="container">
+      <div class="invite-card scroll-in vis">
+        <!-- Corner Kolam ornaments -->
+        <div class="card-tl">
+          <svg viewBox="0 0 52 52" width="46">
+            <path d="M6,46 Q24,-6 48,14 Q62,32 36,44Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".28">
+            </path>
+            <circle cx="10" cy="10" r="2.5" fill="none" stroke="#C8960A" stroke-width=".7" opacity=".45"></circle>
+            <circle cx="22" cy="6" r="1.5" fill="#C8960A" opacity=".40"></circle>
+          </svg>
+        </div>
+        <div class="card-tr">
+          <svg viewBox="0 0 52 52" width="46">
+            <path d="M46,46 Q28,-6 4,14 Q-10,32 16,44Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".28">
+            </path>
+            <circle cx="42" cy="10" r="2.5" fill="none" stroke="#C8960A" stroke-width=".7" opacity=".45"></circle>
+            <circle cx="30" cy="6" r="1.5" fill="#C8960A" opacity=".40"></circle>
+          </svg>
+        </div>
+
+        <!-- Tanjore Ganesha -->
+        <div class="i-ganesha">
+          <img src="./assets/Element 6.png" alt="Ganesha" class="i-ganesha-img">
+        </div>
+
+        <!-- Kolam rule divider -->
+        <div class="i-rule">
+          <svg viewBox="0 0 300 10" width="100%" style="max-width:300px">
+            <line x1="0" y1="5" x2="118" y2="5" stroke="#C8960A" stroke-width=".6" opacity=".38"></line>
+            <path d="M137,5 L144,1 L151,5 L144,9Z" fill="#C8960A" opacity=".55"></path>
+            <line x1="163" y1="5" x2="300" y2="5" stroke="#C8960A" stroke-width=".6" opacity=".38"></line>
+          </svg>
+        </div>
+
+        <p class="i-bless">With the blessings of the Almighty<br>and the love of our families</p>
+        <p class="i-label">Together we invite you to celebrate</p>
+
+        <div class="i-names">
+          <span class="i-bride">Adarsh</span>
+          <span class="i-amp">&amp;</span>
+          <span class="i-groom">Nithyaa Shri</span>
+        </div>
+
+        <div class="i-rule">
+          <svg viewBox="0 0 300 10" width="100%" style="max-width:300px">
+            <line x1="0" y1="5" x2="118" y2="5" stroke="#C8960A" stroke-width=".6" opacity=".38"></line>
+            <path d="M137,5 L144,1 L151,5 L144,9Z" fill="#C8960A" opacity=".55"></path>
+            <line x1="163" y1="5" x2="300" y2="5" stroke="#C8960A" stroke-width=".6" opacity=".38"></line>
+          </svg>
+        </div>
+
+        <div class="i-fam" id="iFam">
+          <div class="fam-side">
+            <div class="fam-gp" id="iFamGpGroom" style="display:none"></div>
+            <div class="fam-parents"><em>Son of</em><br><span id="iGroomParents">Mr.Ramadas PT &amp; Mrs.Bindu
+                Nair</span></div>
+          </div>
+          <div class="fam-dot">◆</div>
+          <div class="fam-side">
+            <div class="fam-gp" id="iFamGpBride" style="display:none"></div>
+            <div class="fam-parents"><em>Daughter of</em><br><span id="iBrideParents">Mr.Balaji Kumar V &amp; Mrs.Ponni
+                V</span></div>
+          </div>
+        </div>
+        <p class="i-close">On the following auspicious occasions</p>
+      </div>
+    </div>
+    <div id="petalInvite" class="petal-canvas">
+      <div
+        style="position: absolute; width: 64.3966px; height: 64.3966px; left: 21.8091%; top: -64.3966px; pointer-events: none;">
+        <img src="./assets/Element_2.png"
+          style="width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; opacity: 0.6; filter: drop-shadow(rgba(200, 64, 96, 0.45) 0px 0px 8px);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave — purple into events -->
+  <div class="wdiv">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+      <path d="M0,24 C360,48 720,0 1080,24 C1260,36 1440,12 1440,24 L1440,48 L0,48Z" fill="#EEE8F8"></path>
+    </svg>
+  </div>
+
+  <!-- EVENTS -->
+  <section id="events" class="s-events">
+    <img class="bg-fill" src="./assets/Background 3.png" alt="" loading="lazy">
+    <div class="ev-paper-veil"></div>
+    <img class="fl-leaf-l" src="./assets/Element 4.png" alt="" aria-hidden="true">
+    <img class="fl-leaf-r" src="./assets/Element 5.png" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="s-head scroll-in vis">
+        <span class="sh-eye">The Celebrations</span>
+        <h2 class="sh-h">Our <em>Events</em></h2>
+      </div>
+      <!-- 12 KOLAM UNDERLINE -->
+      <div class="sh-line-wrap drawn" id="evLinewrap">
+        <svg class="sh-line-svg" viewBox="0 0 320 18" width="320" height="18">
+          <path class="sh-leaf-path"
+            d="M10,9 L55,9 L65,4 L75,9 L85,14 L95,9 L160,9 L225,9 L235,4 L245,9 L255,14 L265,9 L310,9" fill="none"
+            stroke="#C8960A" stroke-width="1" opacity=".52"></path>
+          <circle cx="75" cy="9" r="3" fill="#C8960A" opacity=".58"></circle>
+          <circle cx="160" cy="9" r="4" fill="#4A1E6E" opacity=".52"></circle>
+          <circle cx="245" cy="9" r="3" fill="#C8960A" opacity=".58"></circle>
+          <path d="M153,9 L160,4 L167,9 L160,14Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".48"></path>
+        </svg>
+      </div>
+
+
+      <div class="ev-float-stage" id="evStage">
+        <article class="ev-node ev-row1 scroll-in vis ev-active" style="--sd:.05s" data-idx="0">
+          <div class="ev-icon-wrap"><img src="./assets/icon-haldi.png" alt="Haldi" class="ev-icon" loading="lazy">
+            <div class="ev-glow"></div>
+          </div>
+          <div class="ev-label"><span class="ev-name">Haldi</span><span class="ev-date">6 Jun · 7:00 PM</span></div>
+          <div class="ev-detail">
+            <p class="ev-venue">The Gitanjali Wedding House</p>
+            <p class="ev-desc">Turmeric, coconut water, mango leaves and laughter.</p><a
+              href="https://maps.app.goo.gl/T7u9j2UTYvfQCkA87" class="ev-cta">📍 Open
+              in Google Maps</a>
+          </div>
+        </article>
+        <article class="ev-node ev-row1 ev-node--hero scroll-in vis ev-active" style="--sd:.15s" data-idx="1">
+          <div class="ev-icon-wrap"><img src="./assets/icon-shaadi.png" alt="Wedding" class="ev-icon" loading="lazy">
+            <div class="ev-glow"></div>
+          </div>
+          <div class="ev-label"><span class="ev-name">Wedding</span><span class="ev-date">7 Jun · 10:30 AM</span></div>
+          <div class="ev-detail">
+            <p class="ev-venue">The Gitanjali Wedding House</p>
+            <p class="ev-desc">The sacred Saptapadi — seven steps, one lifetime.</p><a
+              href="https://maps.app.goo.gl/T7u9j2UTYvfQCkA87" class="ev-cta">📍 Open
+              in Google Maps</a>
+          </div>
+        </article>
+        <article class="ev-node ev-row1 scroll-in vis ev-active" style="--sd:.25s" data-idx="2">
+          <div class="ev-icon-wrap"><img src="./assets/icon-reception.png" alt="Reception" class="ev-icon"
+              loading="lazy">
+            <div class="ev-glow"></div>
+          </div>
+          <div class="ev-label"><span class="ev-name">Reception</span><span class="ev-date">11 Jun · 7:00 PM</span>
+          </div>
+          <div class="ev-detail">
+            <p class="ev-venue">Hotel Vijayarani, Trichy</p>
+            <p class="ev-desc">Celebrate under the stars with a feast fit for royalty.</p><a
+              href="https://maps.app.goo.gl/2Y5QnFkzFzMmTGSEA" class="ev-cta">📍 Open
+              in Google Maps</a>
+          </div>
+        </article>
+        <article class="ev-node ev-row1 scroll-in vis ev-active" style="--sd:.25s" data-idx="2">
+          <div class="ev-icon-wrap"><img src="./assets/icon-reception.png" alt="Reception" class="ev-icon"
+              loading="lazy">
+            <div class="ev-glow"></div>
+          </div>
+          <div class="ev-label"><span class="ev-name">Reception</span><span class="ev-date">13 Jun · 7:00 PM</span>
+          </div>
+          <div class="ev-detail">
+            <p class="ev-venue">Chennai Darbar Banquet Hall</p>
+            <p class="ev-desc">Celebrate under the stars with a feast fit for royalty.</p><a
+              href="https://maps.app.goo.gl/epsnHAi3RL9n1roe7" class="ev-cta">📍 Open
+              in Google Maps</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div id="petalEvents" class="petal-canvas"></div>
+  </section>
+
+  <!-- Temple arch divider -->
+  <div class="leaf-div">
+    <svg viewBox="0 0 800 52" width="100%" preserveAspectRatio="xMidYMid meet">
+      <path d="M400,26 Q270,8 140,20 Q70,28 0,22" fill="none" stroke="#4A1E6E" stroke-width=".9" opacity=".38"></path>
+      <path d="M400,26 Q530,8 660,20 Q730,28 800,22" fill="none" stroke="#4A1E6E" stroke-width=".9" opacity=".38">
+      </path>
+      <!-- Kolam diamond at centre -->
+      <path d="M388,26 L400,16 L412,26 L400,36Z" fill="none" stroke="#C8960A" stroke-width="1" opacity=".55"></path>
+      <circle cx="400" cy="26" r="3" fill="#C8960A" opacity=".60"></circle>
+      <!-- Kolam dots along branches -->
+      <circle cx="240" cy="16" r="3" fill="#4A1E6E" opacity=".38"></circle>
+      <circle cx="160" cy="20" r="2.5" fill="#C8960A" opacity=".35"></circle>
+      <circle cx="560" cy="16" r="3" fill="#4A1E6E" opacity=".38"></circle>
+      <circle cx="640" cy="20" r="2.5" fill="#C8960A" opacity=".35"></circle>
+    </svg>
+  </div>
+
+  <!-- STORY — Kanjivaram silk curtain reveal -->
+  <section id="story" class="s-story">
+    <div class="st-paper-bg"></div>
+    <div class="st-stage" id="stStage">
+      <div class="st-reveal revealed" id="stReveal">
+        <!-- Spinning temple wheel mandala -->
+        <div class="st-mandala" aria-hidden="true">
+          <svg viewBox="0 0 320 320" width="320" height="320">
+            <circle cx="160" cy="160" r="138" fill="none" stroke="rgba(74,30,110,.12)" stroke-width="1"></circle>
+            <circle cx="160" cy="160" r="104" fill="none" stroke="rgba(200,150,10,.09)" stroke-width=".8"></circle>
+            <circle cx="160" cy="160" r="68" fill="none" stroke="rgba(74,30,110,.07)" stroke-width=".6"></circle>
+            <!-- 8 temple arch spokes -->
+            <g opacity=".14">
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#C8960A" transform="rotate(0   160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#4A1E6E" transform="rotate(45  160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#C8960A" transform="rotate(90  160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#4A1E6E" transform="rotate(135 160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#C8960A" transform="rotate(180 160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#4A1E6E" transform="rotate(225 160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#C8960A" transform="rotate(270 160 160)"></rect>
+              <rect x="154" y="26" width="12" height="28" rx="6" fill="#4A1E6E" transform="rotate(315 160 160)"></rect>
+            </g>
+            <!-- Kolam diamond centre -->
+            <path d="M148,160 L160,140 L172,160 L160,180Z" fill="none" stroke="rgba(200,150,10,.22)" stroke-width="1.2">
+            </path>
+            <circle cx="160" cy="160" r="8" fill="rgba(200,150,10,.12)"></circle>
+          </svg>
+        </div>
+        <div class="st-rv-inner">
+          <div class="st-rv-header" id="stRvHeader">
+            <span class="sh-eye">Our Story</span>
+            <h2 class="sh-h">Meet the <em>Couple</em></h2>
+          </div>
+          <div class="st-rv-names" id="stRvNames">
+            <span class="st-rv-bride" id="stRvBride">Adarsh</span>
+            <span class="st-rv-amp">&amp;</span>
+            <span class="st-rv-groom" id="stRvGroom">Nithyaa Shri</span>
+          </div>
+          <p class="st-rv-verse" id="stRvVerse">Two souls, one sacred thread, a lifetime of grace.</p>
+          <div class="st-rv-tags" id="stRvTags">
+            <span class="st-rv-tag">Soulmates</span>
+            <span class="st-rv-tag">Best Friends</span>
+            <span class="st-rv-tag">Destined To be Together</span>
+            <span class="st-rv-tag">Forever &amp; always</span>
+          </div>
+        </div>
+        <div class="st-petals" id="stPetals"></div>
+      </div>
+
+      <div class="st-char st-groom" id="stGroom" style="transform: translateX(0px) scale(1);">
+        <img src="./assets/Element_Groom.png" alt="Groom" class="st-char-img" loading="lazy">
+      </div>
+      <div class="st-char st-bride" id="stBride" style="transform: translateX(0px) scale(1);">
+        <img src="./assets/Element_Bride.png" alt="Bride" class="st-char-img" loading="lazy">
+      </div>
+
+      <!-- Kanjivaram silk curtains -->
+      <div class="st-curtains" id="stCurtains">
+        <div class="st-curt st-curt-l" id="stCurtL"
+          style="transform: translateX(0%); filter: drop-shadow(rgba(26, 12, 46, 0) 0px 0px 30px);">
+          <img src="./assets/Element_Curtain.png" alt="" class="st-curt-img" loading="lazy">
+          <div class="st-curt-shadow st-curt-shadow-l"></div>
+        </div>
+        <div class="st-curt st-curt-r" id="stCurtR"
+          style="transform: translateX(0%); filter: drop-shadow(rgba(26, 12, 46, 0) 0px 0px 30px);">
+          <img src="./assets/Element_Curtain.png" alt="" class="st-curt-img" loading="lazy">
+          <div class="st-curt-shadow st-curt-shadow-r"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kolam dot divider -->
+  <div class="diya-div">
+    <svg viewBox="0 0 600 52" width="100%" preserveAspectRatio="xMidYMid meet">
+      <path d="M0,16 Q150,8 300,16 Q450,24 600,16" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".35"></path>
+      <!-- Kolam diamonds as divider nodes -->
+      <path d="M74,16 L80,10 L86,16 L80,22Z" fill="none" stroke="#4A1E6E" stroke-width=".8" opacity=".45"></path>
+      <path d="M174,12 L180,6  L186,12 L180,18Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".45"></path>
+      <path d="M293,16 L300,9  L307,16 L300,23Z" fill="#C8960A" opacity=".40"></path>
+      <path d="M414,12 L420,6  L426,12 L420,18Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".45"></path>
+      <path d="M514,16 L520,10 L526,16 L520,22Z" fill="none" stroke="#4A1E6E" stroke-width=".8" opacity=".45"></path>
+      <circle cx="80" cy="16" r="2" fill="#C8960A" opacity=".55"></circle>
+      <circle cx="180" cy="12" r="2" fill="#4A1E6E" opacity=".50"></circle>
+      <circle cx="300" cy="16" r="2.5" fill="#F8F2E4" opacity=".70"></circle>
+      <circle cx="420" cy="12" r="2" fill="#4A1E6E" opacity=".50"></circle>
+      <circle cx="520" cy="16" r="2" fill="#C8960A" opacity=".55"></circle>
+    </svg>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="s-gallery">
+    <img class="bg-fill" src="./assets/Background 6.png" alt="" loading="lazy">
+    <div class="container">
+      <div class="s-head scroll-in vis">
+        <span class="sh-eye">Moments</span>
+        <h2 class="sh-h">Our <em>Gallery</em></h2>
+      </div>
+      <div class="sh-line-wrap drawn" id="galLinewrap">
+        <svg class="sh-line-svg" viewBox="0 0 320 18" width="320" height="18">
+          <path class="sh-leaf-path"
+            d="M10,9 L55,9 L65,4 L75,9 L85,14 L95,9 L160,9 L225,9 L235,4 L245,9 L255,14 L265,9 L310,9" fill="none"
+            stroke="#C8960A" stroke-width="1" opacity=".52"></path>
+          <circle cx="75" cy="9" r="3" fill="#C8960A" opacity=".58"></circle>
+          <circle cx="160" cy="9" r="4" fill="#4A1E6E" opacity=".52"></circle>
+          <circle cx="245" cy="9" r="3" fill="#C8960A" opacity=".58"></circle>
+          <path d="M153,9 L160,4 L167,9 L160,14Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".48"></path>
+        </svg>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item gal-tall"><img src="./assets/photo1.jpg" style="width:100%;height:100%;object-fit:cover"
+            alt=""><img class="gal-frame" src="./assets/kolam-frame.png" alt="" aria-hidden="true"
+            onerror="this.style.display=&#39;none&#39;"></div>
+        <div class="gal-item "><img src="./assets/photo2.jpg" style="width:100%;height:100%;object-fit:cover"
+            alt=""><img class="gal-frame" src="./assets/kolam-frame.png" alt="" aria-hidden="true"
+            onerror="this.style.display=&#39;none&#39;"></div>
+        <div class="gal-item "><img src="./assets/photo3.png" style="width:100%;height:100%;object-fit:cover"
+            alt=""><img class="gal-frame" src="./assets/kolam-frame.png" alt="" aria-hidden="true"
+            onerror="this.style.display=&#39;none&#39;"></div>
+        <div class="gal-item "><img src="./assets/photo4.png" style="width:100%;height:100%;object-fit:cover"
+            alt=""><img class="gal-frame" src="./assets/kolam-frame.png" alt="" aria-hidden="true"
+            onerror="this.style.display=&#39;none&#39;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THINGS TO KNOW -->
+  <section id="things" class="s-things" style="display: none;">
+    <img class="bg-fill things-sky" src="./assets/Hero_background.png" alt="" loading="lazy">
+    <div class="things-veil"></div>
+    <div id="petalThings" class="petal-canvas"></div>
+    <div class="container">
+      <div class="s-head scroll-in">
+        <span class="sh-eye sh-eye--lt">Good to Know</span>
+        <h2 class="sh-h sh-h--lt">Things to <em>Know</em></h2>
+      </div>
+      <div class="sh-line-wrap" id="thingsLinewrap">
+        <svg class="sh-line-svg" viewBox="0 0 320 18" width="320" height="18">
+          <path class="sh-leaf-path"
+            d="M10,9 L55,9 L65,4 L75,9 L85,14 L95,9 L160,9 L225,9 L235,4 L245,9 L255,14 L265,9 L310,9" fill="none"
+            stroke="#C8960A" stroke-width="1" opacity=".60"></path>
+          <circle cx="75" cy="9" r="3" fill="#C8960A" opacity=".65"></circle>
+          <circle cx="160" cy="9" r="4" fill="#E8C890" opacity=".60"></circle>
+          <circle cx="245" cy="9" r="3" fill="#C8960A" opacity=".65"></circle>
+          <path d="M153,9 L160,4 L167,9 L160,14Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".55"></path>
+        </svg>
+      </div>
+      <div class="tt-row">
+        <div class="tt scroll-in" style="--sd:0s">
+          <svg class="tt-ic" viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="#C8960A" stroke-width="1.3"
+            stroke-linecap="round">
+            <line x1="7" y1="12" x2="25" y2="12"></line>
+            <line x1="7" y1="20" x2="25" y2="20"></line>
+            <line x1="13" y1="6" x2="11" y2="26"></line>
+            <line x1="21" y1="6" x2="19" y2="26"></line>
+          </svg>
+          <span class="tt-l" data-ttk="hashtag">Hashtag</span>
+          <p class="tt-v" id="ttkHashtag">#PriyaWedsArjun</p>
+        </div>
+        <div class="tt scroll-in" style="--sd:.10s">
+          <svg class="tt-ic" viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="#C8960A" stroke-width="1.3"
+            stroke-linecap="round">
+            <path d="M16 7a3 3 0 0 1 3 3"></path>
+            <path d="M5 23 L16 11 L27 23 Q28 25 26 26 L6 26 Q4 25 5 23Z"></path>
+          </svg>
+          <span class="tt-l">Dress Code</span>
+          <p class="tt-v">Traditional / Ethnic</p>
+        </div>
+        <div class="tt scroll-in" style="--sd:.20s">
+          <svg class="tt-ic" viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="#C8960A" stroke-width="1.3"
+            stroke-linecap="round">
+            <path d="M16 3a10 10 0 0 1 10 10c0 9-10 18-10 18S6 22 6 13A10 10 0 0 1 16 3z"></path>
+            <circle cx="16" cy="13" r="3.5"></circle>
+          </svg>
+          <span class="tt-l" data-ttk="venue">Venue</span>
+          <p class="tt-v" id="ttkVenue">Kapaleeshwarar Temple<br>Chennai</p>
+        </div>
+        <div class="tt scroll-in" style="--sd:.30s">
+          <svg class="tt-ic" viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="#C8960A" stroke-width="1.3"
+            stroke-linecap="round">
+            <circle cx="16" cy="16" r="12"></circle>
+            <path d="M16 10v6l4 3"></path>
+          </svg>
+          <span class="tt-l">Parking</span>
+          <p class="tt-v">Available<br>on-site</p>
+        </div>
+      </div>
+      <div class="tt-ig scroll-in"><span>Follow our story</span><a
+          href="https://pub-1cc0f6e993214be9a36badeeb631f4b6.r2.dev/templates/template05/#">#Nithyaa ShriWedsAdarsh</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave into RSVP — dark indigo → ivory -->
+  <div class="wdiv" style="background:#0E0820;line-height:0">
+    <svg viewBox="0 0 1440 55" preserveAspectRatio="none" style="display:block;width:100%">
+      <path d="M0,33 C360,0 720,55 1080,33 C1260,16 1440,50 1440,33 L1440,55 L0,55Z" fill="#F8F2E4"></path>
+    </svg>
+  </div>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="s-rsvp">
+    <div class="rsvp-paper-veil"></div>
+    <div class="rsvp-florals" aria-hidden="true">
+      <svg class="rsvp-fl rsvp-fl--tl" viewBox="0 0 180 180" fill="none">
+        <ellipse cx="60" cy="90" rx="16" ry="40" fill="#4A1E6E" opacity=".06" transform="rotate(-30 60 90)"></ellipse>
+        <ellipse cx="90" cy="55" rx="13" ry="34" fill="#C8960A" opacity=".05" transform="rotate(20 90 55)"></ellipse>
+        <ellipse cx="115" cy="95" rx="15" ry="36" fill="#C84060" opacity=".04" transform="rotate(60 115 95)"></ellipse>
+        <path d="M80,80 L88,70 L96,80 L88,90Z" fill="#C8960A" opacity=".09"></path>
+      </svg>
+      <svg class="rsvp-fl rsvp-fl--br" viewBox="0 0 180 180" fill="none">
+        <ellipse cx="60" cy="90" rx="16" ry="40" fill="#4A1E6E" opacity=".06" transform="rotate(-30 60 90)"></ellipse>
+        <ellipse cx="90" cy="55" rx="13" ry="34" fill="#C8960A" opacity=".05" transform="rotate(20 90 55)"></ellipse>
+        <path d="M80,80 L88,70 L96,80 L88,90Z" fill="#C8960A" opacity=".09"></path>
+      </svg>
+      <svg class="rsvp-fl rsvp-fl--tr" viewBox="0 0 120 120" fill="none">
+        <ellipse cx="40" cy="60" rx="9" ry="25" fill="#4A1E6E" opacity=".06" transform="rotate(15 40 60)"></ellipse>
+        <ellipse cx="75" cy="45" rx="8" ry="21" fill="#C8960A" opacity=".05" transform="rotate(-40 75 45)"></ellipse>
+      </svg>
+      <svg class="rsvp-fl rsvp-fl--bl" viewBox="0 0 120 120" fill="none">
+        <ellipse cx="40" cy="60" rx="9" ry="25" fill="#4A1E6E" opacity=".06" transform="rotate(15 40 60)"></ellipse>
+        <ellipse cx="75" cy="45" rx="8" ry="21" fill="#C8960A" opacity=".05" transform="rotate(-40 75 45)"></ellipse>
+      </svg>
+    </div>
+
+    <img class="s-diya-l" src="./assets/Element 1.png" alt="" aria-hidden="true">
+    <img class="s-diya-r" src="./assets/Element 1.png" alt="" aria-hidden="true">
+    <div class="rsvp-toran" aria-hidden="true">
+      <img src="./assets/Background 4.png" alt="" class="toran-img">
+    </div>
+    <div id="petalRsvp" class="petal-canvas"></div>
+
+    <div class="container rsvp-body">
+      <div class="rsvp-rule scroll-in">
+        <svg viewBox="0 0 400 12" width="100%" style="max-width:400px">
+          <line x1="0" y1="6" x2="168" y2="6" stroke="#C8960A" stroke-width=".7" opacity=".35"></line>
+          <path d="M184,6 L192,1 L200,6 L192,11Z" fill="#C8960A" opacity=".52"></path>
+          <line x1="208" y1="6" x2="400" y2="6" stroke="#C8960A" stroke-width=".7" opacity=".35"></line>
+        </svg>
+      </div>
+      <!-- <span class="rsvp-eye scroll-in" style="--sd:.05s">Join the Celebration</span> -->
+      <!-- <h2 class="rsvp-heading scroll-in" id="rsvpHeading" style="--sd:.12s">Will you <em>join us?</em></h2> -->
+      <h2 class="rsvp-heading scroll-in" id="rsvpHeading" style="--sd:.12s">Join the <em>Celebration</em></h2>
+      <p class="rsvp-sub scroll-in" id="rsvpSub" style="--sd:.22s">We have lit the kuthuvillakku, spread the kolam, and
+        saved a seat for you in our mandapam. Come celebrate as we begin this sacred and joyful chapter of our lives.
+      </p>
+      <!-- <div class="rsvp-cta-wrap scroll-in" style="--sd:.34s">
+        <a id="rsvpWaBtn" class="rsvp-wa-btn"
+          href="https://wa.me/91?text=Hi%20Nithyaa Shri%20%26%20Adarsh!%20I%20would%20be%20honoured%20to%20join%20your%20celebration!"
+          target="_blank" rel="noopener noreferrer" aria-label="RSVP via WhatsApp">
+          <span class="rsvp-wa-shimmer"></span>
+          <span class="rsvp-wa-inner"><svg class="rsvp-wa-icon" viewBox="0 0 24 24" width="17" height="17"
+              fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z">
+              </path>
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.554 4.121 1.527 5.855L0 24l6.306-1.506A11.951 11.951 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.003-1.37l-.359-.214-3.737.892.93-3.63-.235-.373A9.818 9.818 0 1112 21.818z">
+              </path>
+            </svg>Yes, I'll be there</span>
+        </a>
+      </div>
+      <p class="rsvp-ps scroll-in" style="--sd:.44s">You will be redirected to WhatsApp to confirm your attendance.</p>
+      <div class="rsvp-rule scroll-in" style="--sd:.5s">
+        <svg viewBox="0 0 400 12" width="100%" style="max-width:400px">
+          <line x1="0" y1="6" x2="168" y2="6" stroke="#C8960A" stroke-width=".7" opacity=".35"></line>
+          <path d="M184,6 L192,1 L200,6 L192,11Z" fill="#C8960A" opacity=".52"></path>
+          <line x1="208" y1="6" x2="400" y2="6" stroke="#C8960A" stroke-width=".7" opacity=".35"></line>
+        </svg>
+      </div> -->
+    </div>
+  </section>
+  <!-- <div style="text-align: center; padding: 40px 20px;">
+    <div
+      style="font-size:0.55rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(0,0,0,0.35);margin-bottom:20px;font-family:inherit;">
+      Save the date</div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;"><a
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Adarsh%20weds%20Nithyaa%20Shri&amp;dates=20260607/20260608&amp;location="
+        target="_blank" rel="noopener"
+        style="display:inline-block;padding:12px 24px;background:transparent;border:1px solid #C8960A;color:#C8960A;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;font-family:inherit;">Google
+        Calendar</a><a
+        href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20261212%0ADTEND:20261213%0ASUMMARY:Adarsh%20weds%20Nithyaa%20Shri%0ALOCATION:%0AEND:VEVENT%0AEND:VCALENDAR"
+        download="wedding.ics"
+        style="display:inline-block;padding:12px 24px;background:#C8960A;color:#F8F2E4;font-size:0.58rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;font-family:inherit;">Apple
+        / iCal</a></div>
+  </div> -->
+
+  <!-- FOOTER — deep indigo temple stone -->
+  <footer class="footer">
+    <!-- Kolam lotus footer icon -->
+    <svg class="ft-lotus" viewBox="0 0 80 44" width="66" aria-hidden="true">
+      <!-- Kolam 8-petal lotus -->
+      <ellipse cx="40" cy="36" rx="7" ry="14" fill="#C8960A" opacity=".18" transform="rotate(-45 40 36)"></ellipse>
+      <ellipse cx="40" cy="36" rx="7" ry="14" fill="#4A1E6E" opacity=".16" transform="rotate(0   40 36)"></ellipse>
+      <ellipse cx="40" cy="36" rx="7" ry="14" fill="#C8960A" opacity=".18" transform="rotate(45  40 36)"></ellipse>
+      <ellipse cx="40" cy="36" rx="7" ry="14" fill="#4A1E6E" opacity=".16" transform="rotate(90  40 36)"></ellipse>
+      <ellipse cx="40" cy="36" rx="7" ry="14" fill="#C8960A" opacity=".18" transform="rotate(135 40 36)"></ellipse>
+      <circle cx="40" cy="36" r="5" fill="#C8960A" opacity=".45"></circle>
+      <!-- Small kolam diamond above -->
+      <path d="M36,20 L40,14 L44,20 L40,26Z" fill="none" stroke="#C8960A" stroke-width=".8" opacity=".38"></path>
+    </svg>
+    <div class="ft-names">Adarsh &amp; Nithyaa Shri</div>
+    <div class="ft-rule"></div>
+    <p class="ft-date">7 June 2026</p>
+  </footer>
+
+  <script src="./assets/script.js"></script>
+
+  <script>
+    (function applyWeddingConfig() {
+      'use strict';
+      const C = (typeof WEDDING_CONFIG !== 'undefined') ? WEDDING_CONFIG : null;
+      if (!C) { initMusic(); return; }
+      const { couple, invite, events, story, gallery, thingsToKnow, rsvp } = C;
+      function fmt(d) { try { return new Date(d + 'T00:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { return d || ''; } }
+      function fmtT(t) { if (!t) return ''; const [h, m] = t.split(':'); const hr = parseInt(h); return (hr % 12 || 12) + ':' + (m || '00') + ' ' + (hr < 12 ? 'AM' : 'PM'); }
+      function el(id) { return document.getElementById(id); }
+      const dShort = couple.date ? new Date(couple.date + 'T00:00').toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '';
+      document.title = couple.groom + ' & ' + couple.bride + ' · ' + dShort;
+      const heroCopy = el('heroCopy');
+      if (heroCopy) { const bEl = heroCopy.querySelector('.hc-bride span'), gEl = heroCopy.querySelector('.hc-groom span'); if (bEl) bEl.textContent = couple.groom; if (gEl) gEl.textContent = couple.bride; }
+      const pn1 = document.querySelector('.pl-n1'), pn2 = document.querySelector('.pl-n2');
+      if (pn1) pn1.textContent = couple.groom; if (pn2) pn2.textContent = couple.bride;
+      const blessEl = document.querySelector('.i-bless');
+      if (blessEl && invite && invite.blessing) blessEl.innerHTML = invite.blessing.replace(/\n/g, '<br>');
+      const ib = document.querySelector('.i-bride'), ig2 = document.querySelector('.i-groom');
+      if (ib) ib.textContent = couple.groom; if (ig2) ig2.textContent = couple.bride;
+      if (invite) {
+        const bF = [invite.brideFather, invite.brideMother].filter(Boolean).join(' & ') || 'Mr. & Mrs. Iyer';
+        const gF = [invite.groomFather, invite.groomMother].filter(Boolean).join(' & ') || 'Mr. & Mrs. Nair';
+        const bPar = el('iBrideParents'), gPar = el('iGroomParents');
+        if (bPar) bPar.textContent = bF; if (gPar) gPar.textContent = gF;
+        if (invite.showGrandparents) {
+          const bgp = [invite.brideGF, invite.brideGM].filter(Boolean).join(' & ');
+          const ggp = [invite.groomGF, invite.groomGM].filter(Boolean).join(' & ');
+          const bgpEl = el('iFamGpBride'), ggpEl = el('iFamGpGroom');
+          if (bgpEl && bgp) { bgpEl.innerHTML = '<em>Blessed by</em><br>' + bgp; bgpEl.style.display = 'block'; }
+          if (ggpEl && ggp) { ggpEl.innerHTML = '<em>Blessed by</em><br>' + ggp; ggpEl.style.display = 'block'; }
+        }
+      }
+      const evStage = el('evStage');
+      if (evStage && events && events.length) {
+        const half = Math.ceil(events.length / 2);
+        const maxCols = half;
+        evStage.dataset.evCount = events.length;
+        evStage.style.setProperty('--ev-cols', maxCols);
+        const row2Len = events.length - half;
+        evStage.innerHTML = events.map((ev, idx) => {
+          const isRow2 = idx >= half;
+          const row = isRow2 ? 'ev-row2' : 'ev-row1';
+          const hero = ev.id === 'shaadi' || ev.id === 'pheras' ? 'ev-node--hero' : '';
+          const sd = (idx * .1).toFixed(2);
+          const dStr = ev.date ? new Date(ev.date + 'T00:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) : '';
+          const tStr = fmtT(ev.time);
+          const dateLabel = [dStr, tStr].filter(Boolean).join(' · ');
+          const mapsLink = ev.mapsLink ? `<a href="${ev.mapsLink}" target="_blank" class="ev-cta">📍 Open in Google Maps</a>` : '';
+          let colStyle = '';
+          if (isRow2 && row2Len < maxCols) { const r2i = idx - half; const col = row2Len === 1 ? '1/-1' : `${Math.round(r2i * (maxCols - 1) / (row2Len - 1)) + 1}`; colStyle = `grid-column:${col};`; }
+          return `<article class="ev-node ${row} ${hero} scroll-in" style="--sd:${sd}s;${colStyle}" data-idx="${idx}">
+        <div class="ev-icon-wrap"><img src="${ev.icon}" alt="${ev.name}" class="ev-icon" onerror="this.style.display='none'"><div class="ev-glow"></div></div>
+        <div class="ev-label"><span class="ev-name">${ev.name}</span><span class="ev-date">${dateLabel}</span></div>
+        <div class="ev-detail">${ev.venue ? `<p class="ev-venue">${ev.venue}</p>` : ''}${ev.desc ? `<p class="ev-desc">${ev.desc}</p>` : ''}${mapsLink}</div>
+      </article>`;
+        }).join('');
+        setTimeout(() => { evStage.querySelectorAll('.scroll-in').forEach(function (n) { n.classList.add('vis'); }); if (typeof initEventsAutoOpen === 'function') initEventsAutoOpen(); if (typeof window._evJourneyLayout === 'function') window._evJourneyLayout(); }, 120);
+      }
+      if (invite && invite.show === false) { const is = el('invite'); if (is) is.style.display = 'none'; }
+      if (story && story.show === false) { const ss = el('story'); if (ss) ss.style.display = 'none'; }
+      else {
+        const setText = (id, txt) => { const e = el(id); if (e && txt) e.textContent = txt; };
+        setText('stRvBride', couple.groom); setText('stRvGroom', couple.bride);
+        const tagEl = el('stRvTags');
+        if (tagEl && story && story.tags && story.tags.length) tagEl.innerHTML = story.tags.map(t => `<span class="st-rv-tag">${t}</span>`).join('');
+        const htag = (story && story.customHashtag) || couple.hashtag || '';
+        if (htag) document.querySelectorAll('.tt-ig a').forEach(a => a.textContent = htag);
+      }
+      const galSec = el('gallery');
+      if (galSec) {
+        if (!gallery || !gallery.show || gallery.layout === 'skip') { galSec.style.display = 'none'; }
+        else if (gallery.photos && gallery.photos.length) {
+          const gg = galSec.querySelector('.gal-grid');
+          if (gg) {
+            const n = parseInt(gallery.layout) || 4;
+            if (n < 4) gg.style.gridTemplateColumns = 'repeat(' + n + ',1fr)';
+            gg.innerHTML = Array.from({ length: n }, (_, i) => {
+              const p = gallery.photos[i];
+              const frame = '<img class="gal-frame" src="https://pub-1cc0f6e993214be9a36badeeb631f4b6.r2.dev/templates/template05/assets/frames/kolam-frame.png" alt="" aria-hidden="true" onerror="this.style.display=\'none\'">';
+              return p ? `<div class="gal-item ${i === 0 && n === 4 ? 'gal-tall' : ''}"><img src="${p}" style="width:100%;height:100%;object-fit:cover" alt="">${frame}</div>` : `<div class="gal-item ${i === 0 && n === 4 ? 'gal-tall' : ''}"><div class="gal-ph"><span class="gal-m">P&A</span></div>${frame}</div>`;
+            }).join('');
+          }
+        }
+      }
+      const thingsSec = el('things');
+      if (C.showThingsToKnow === false) { if (thingsSec) thingsSec.style.display = 'none'; }
+      else if (thingsToKnow && thingsToKnow.length) {
+        const ttRow = document.querySelector('.tt-row');
+        const firstIc = ttRow && ttRow.querySelector('.tt-ic');
+        const iconStroke = firstIc ? firstIc.getAttribute('stroke') : '#C4985A';
+        const custIc = '<svg class="tt-ic" viewBox="0 0 32 32" width="36" height="36" fill="none" stroke="' + iconStroke + '" stroke-width="1.3" stroke-linecap="round"><circle cx="16" cy="16" r="11"/><line x1="16" y1="13" x2="16" y2="20"/><circle cx="16" cy="10" r="1" fill="' + iconStroke + '"/></svg>';
+        const htag = (story && story.customHashtag) || couple.hashtag || '';
+        const matchedIds = new Set();
+        document.querySelectorAll('.tt').forEach(function (card) {
+          const lEl = card.querySelector('.tt-l'), vEl = card.querySelector('.tt-v');
+          if (!lEl || !vEl) return;
+          const lbl = lEl.textContent.toLowerCase().trim();
+          const m = thingsToKnow.find(function (t) { return t.label && (t.label.toLowerCase().includes(lbl) || lbl.includes(t.label.toLowerCase())); });
+          if (m) { vEl.textContent = m.id === 'hashtag' && htag ? htag : m.value; matchedIds.add(m.id); card.style.display = ''; }
+          else { card.style.display = 'none'; }
+        });
+        if (ttRow) {
+          thingsToKnow.forEach(function (item, i) {
+            if (matchedIds.has(item.id) || !item.label) return;
+            const div = document.createElement('div');
+            div.className = 'tt scroll-in vis';
+            div.setAttribute('style', '--sd:' + (0.1 * i).toFixed(1) + 's');
+            div.innerHTML = custIc + '<span class="tt-l">' + item.label + '</span><p class="tt-v">' + item.value + '</p>';
+            ttRow.appendChild(div);
+          });
+        }
+        const igA = document.querySelector('.tt-ig a');
+        if (igA) igA.textContent = htag || igA.textContent;
+      } else if (thingsSec) { thingsSec.style.display = 'none'; }
+      const rsvpSec = el('rsvp');
+      if (rsvpSec && rsvp) {
+        const hEl = el('rsvpHeading');
+        if (hEl && rsvp.heading) hEl.innerHTML = rsvp.heading.replace(/(Celebration[?!.]?)/i, '<em>$1</em>');
+        const subEl = el('rsvpSub');
+        if (subEl && rsvp.subtext) subEl.innerHTML = rsvp.subtext;
+        const waBtn = el('rsvpWaBtn');
+        if (waBtn) {
+          if (rsvp.mode === 'form') {
+            if (!rsvp.form_url) { waBtn.style.display = 'none'; }
+            else { waBtn.href = rsvp.form_url; waBtn.setAttribute('target', '_blank'); waBtn.setAttribute('rel', 'noopener noreferrer'); }
+          } else {
+            const phone = ((couple.whatsapp || rsvp.whatsapp || '').replace(/\D/g, ''));
+            const full = phone.startsWith('91') ? phone : '91' + phone;
+            const msg = encodeURIComponent('Hi ' + couple.groom + ' & ' + couple.bride + '! I would be honoured to join your celebration!');
+            waBtn.href = 'https://wa.me/' + full + '?text=' + msg;
+          }
+        }
+        const btnInner = rsvpSec.querySelector('.rsvp-wa-inner');
+        if (btnInner) {
+          if (rsvp.mode === 'form' && rsvp.form_url) { const ic = btnInner.querySelector('svg'); if (ic) ic.style.display = 'none'; btnInner.textContent = rsvp.button_text || 'Fill RSVP Form'; }
+          else if (rsvp.mode !== 'form' && rsvp.btnText) { const ic = btnInner.querySelector('svg'); btnInner.textContent = rsvp.btnText; if (ic) btnInner.prepend(ic); }
+        }
+      }
+      const ftN = document.querySelector('.ft-names');
+      if (ftN) ftN.textContent = couple.groom + ' & ' + couple.bride;
+      const ftD = document.querySelector('.ft-date');
+      if (ftD) ftD.textContent = fmt(couple.date) + (couple.venue ? ' · ' + couple.venue : '');
+      initMusic();
+    })();
+    if (typeof WEDDING_CONFIG === 'undefined') initMusic();
+
+    function initMusic() {
+      if (window.__GALLERY_MODE__) return;
+      const audio = document.getElementById('bgMusic');
+      const btn = document.getElementById('musicBtn');
+      if (!audio || !btn) return;
+      if (typeof WEDDING_CONFIG !== 'undefined' && WEDDING_CONFIG.music && WEDDING_CONFIG.music.src) { audio.src = WEDDING_CONFIG.music.src; audio.load(); audio.onerror = function () { audio.onerror = null; audio.src = ''; audio.load(); }; }
+      const iconOn = document.getElementById('musicIconOn'), iconOff = document.getElementById('musicIconOff'), lbl = document.getElementById('musicLabel');
+      let playing = false;
+      function setPlayingUI(p) {
+        playing = p;
+        if (iconOn) iconOn.style.display = p ? 'none' : '';
+        if (iconOff) iconOff.style.display = p ? '' : 'none';
+        if (lbl) lbl.textContent = p ? 'Mute' : 'Music';
+        btn.classList.toggle('playing', p); btn.textContent = p ? '🔔' : '🔕';
+      }
+      window.toggleMusic = function () { if (playing) { audio.pause(); setPlayingUI(false); } else { audio.play().then(() => setPlayingUI(true)).catch(() => setPlayingUI(false)); } };
+      btn.addEventListener('touchstart', function () { }, { passive: true });
+      document.addEventListener('keydown', function (e) { if (e.code === 'KeyM') window.toggleMusic(); });
+      function tryAutoplay() { audio.volume = 0.50; audio.play().then(() => setPlayingUI(true)).catch(() => { setPlayingUI(false); function onFirst() { audio.play().then(() => setPlayingUI(true)).catch(() => { }); document.removeEventListener('scroll', onFirst); document.removeEventListener('click', onFirst); document.removeEventListener('touchstart', onFirst); } document.addEventListener('scroll', onFirst, { once: true, passive: true }); document.addEventListener('click', onFirst, { once: true }); document.addEventListener('touchstart', onFirst, { once: true, passive: true }); }); }
+      setTimeout(tryAutoplay, 400);
+      setTimeout(tryAutoplay, 1200);
+    }
+  </script>
+
+  <!-- removed buggy parentsOrder script -->
+
+</body>
+
+</html>
