@@ -91,12 +91,151 @@
 
 <body class="">
 
+  <!-- ═══ ENTRY GATE — tap to open invitation & start music ═══ -->
+  <div id="entryGate" class="entry-gate">
+    <div class="eg-content">
+      <div class="eg-mandala" aria-hidden="true">
+        <!-- <svg viewBox="0 0 120 120" width="80" height="80">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="#C8960A" stroke-width="1" opacity=".4">
+            <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="20s"
+              repeatCount="indefinite" />
+          </circle>
+          <circle cx="60" cy="60" r="38" fill="none" stroke="#4A1E6E" stroke-width=".8" opacity=".3">
+            <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="15s"
+              repeatCount="indefinite" />
+          </circle>
+          <circle cx="60" cy="60" r="4" fill="#C8960A" opacity=".6" />
+        </svg> -->
+      </div>
+      <p class="eg-couple">Adarsh <span class="eg-amp">Weds</span> Nithyaa Shri</p>
+      <p class="eg-date">7 June 2026</p>
+      <button class="eg-btn" id="entryBtn">
+        <span class="eg-btn-shimmer"></span>
+        <span class="eg-btn-text">Open Invitation</span>
+      </button>
+    </div>
+  </div>
+  <style>
+    .entry-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(ellipse at center, #1a0a2e 0%, #0e0620 60%, #070312 100%);
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+
+    .entry-gate.eg-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .eg-content {
+      text-align: center;
+      animation: egFadeIn 1s ease .2s both;
+    }
+
+    @keyframes egFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .eg-mandala {
+      margin: 0 auto 24px;
+    }
+
+    .eg-couple {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #F8F2E4;
+      letter-spacing: .04em;
+      margin: 0 0 6px;
+    }
+
+    .eg-amp {
+      color: #C8960A;
+      font-style: italic;
+      margin: 0 6px;
+    }
+
+    .eg-date {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(200, 150, 90, .6);
+      margin: 0 0 32px;
+    }
+
+    .eg-btn {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid rgba(200, 150, 10, .5);
+      color: #C8960A;
+      padding: 14px 40px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background .3s, color .3s, border-color .3s, box-shadow .3s;
+    }
+
+    .eg-btn:hover {
+      background: rgba(200, 150, 10, .12);
+      border-color: #C8960A;
+      box-shadow: 0 0 30px rgba(200, 150, 10, .15);
+    }
+
+    .eg-btn-shimmer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(200, 150, 10, .12) 50%, transparent 60%);
+      animation: egShimmer 2.5s ease infinite;
+    }
+
+    @keyframes egShimmer {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+
+    .eg-btn-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eg-hint {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .55rem;
+      letter-spacing: .12em;
+      color: rgba(200, 150, 90, .35);
+      margin: 18px 0 0;
+      text-transform: uppercase;
+    }
+  </style>
+
   <div class="c-ring" id="cRing"></div>
   <div class="c-dot" id="cDot"></div>
 
-  <audio id="bgMusic" loop="" preload="none">
-    <source src="https://pub-1cc0f6e993214be9a36badeeb631f4b6.r2.dev/templates/template05/assets/song/Template_05.mp3"
-      type="audio/mpeg">
+  <audio id="bgMusic" loop="" preload="auto">
+    <source src="./assets/2states_custom_loop.mp3" type="audio/mpeg">
   </audio>
   <button class="music-btn playing" id="musicBtn" onclick="toggleMusic()" aria-label="Toggle music">🔔</button>
 
@@ -524,7 +663,7 @@
           </div>
         </article>
         <article class="ev-node ev-row1 scroll-in vis ev-active" style="--sd:.25s" data-idx="2">
-          <div class="ev-icon-wrap"><img src="./assets/icon-reception.png" alt="Reception" class="ev-icon"
+          <div class="ev-icon-wrap"><img src="./assets/icon-reception-2.png" alt="Reception" class="ev-icon"
               loading="lazy">
             <div class="ev-glow"></div>
           </div>
@@ -1018,22 +1157,69 @@
       const audio = document.getElementById('bgMusic');
       const btn = document.getElementById('musicBtn');
       if (!audio || !btn) return;
-      if (typeof WEDDING_CONFIG !== 'undefined' && WEDDING_CONFIG.music && WEDDING_CONFIG.music.src) { audio.src = WEDDING_CONFIG.music.src; audio.load(); audio.onerror = function () { audio.onerror = null; audio.src = ''; audio.load(); }; }
-      const iconOn = document.getElementById('musicIconOn'), iconOff = document.getElementById('musicIconOff'), lbl = document.getElementById('musicLabel');
-      let playing = false;
-      function setPlayingUI(p) {
-        playing = p;
-        if (iconOn) iconOn.style.display = p ? 'none' : '';
-        if (iconOff) iconOff.style.display = p ? '' : 'none';
-        if (lbl) lbl.textContent = p ? 'Mute' : 'Music';
-        btn.classList.toggle('playing', p); btn.textContent = p ? '🔔' : '🔕';
+      if (typeof WEDDING_CONFIG !== 'undefined' && WEDDING_CONFIG.music && WEDDING_CONFIG.music.src) {
+        audio.src = WEDDING_CONFIG.music.src; audio.load();
+        audio.onerror = function () { audio.onerror = null; audio.src = ''; audio.load(); };
       }
-      window.toggleMusic = function () { if (playing) { audio.pause(); setPlayingUI(false); } else { audio.play().then(() => setPlayingUI(true)).catch(() => setPlayingUI(false)); } };
+      const iconOn = document.getElementById('musicIconOn'), iconOff = document.getElementById('musicIconOff'), lbl = document.getElementById('musicLabel');
+      let userMuted = false; // true only if user explicitly clicked mute
+
+      function updateUI() {
+        const isPlaying = !audio.paused;
+        if (iconOn) iconOn.style.display = isPlaying ? 'none' : '';
+        if (iconOff) iconOff.style.display = isPlaying ? '' : 'none';
+        if (lbl) lbl.textContent = isPlaying ? 'Mute' : 'Music';
+        btn.classList.toggle('playing', isPlaying);
+        btn.textContent = isPlaying ? '🔔' : '🔕';
+      }
+
+      function startAudio() {
+        if (!audio.paused || userMuted) return;
+        audio.volume = 0.50;
+        audio.play().then(() => { updateUI(); cleanupListeners(); }).catch(() => { });
+      }
+
+      window.toggleMusic = function () {
+        if (!audio.paused) {
+          audio.pause(); userMuted = true; updateUI();
+        } else {
+          userMuted = false;
+          audio.play().then(() => updateUI()).catch(() => updateUI());
+        }
+      };
+
       btn.addEventListener('touchstart', function () { }, { passive: true });
       document.addEventListener('keydown', function (e) { if (e.code === 'KeyM') window.toggleMusic(); });
-      function tryAutoplay() { audio.volume = 0.50; audio.play().then(() => setPlayingUI(true)).catch(() => { setPlayingUI(false); function onFirst() { audio.play().then(() => setPlayingUI(true)).catch(() => { }); document.removeEventListener('scroll', onFirst); document.removeEventListener('click', onFirst); document.removeEventListener('touchstart', onFirst); } document.addEventListener('scroll', onFirst, { once: true, passive: true }); document.addEventListener('click', onFirst, { once: true }); document.addEventListener('touchstart', onFirst, { once: true, passive: true }); }); }
-      setTimeout(tryAutoplay, 400);
-      setTimeout(tryAutoplay, 1200);
+
+      // Only these events grant "user activation" for audio.play()
+      const events = ['click', 'pointerup', 'mouseup', 'touchend', 'keydown'];
+      function onInteraction() { startAudio(); }
+      function cleanupListeners() {
+        events.forEach(evt => document.removeEventListener(evt, onInteraction));
+      }
+      events.forEach(evt => {
+        document.addEventListener(evt, onInteraction, { passive: true });
+      });
+
+      // Wire up the entry gate — click triggers audio + hides overlay
+      const gate = document.getElementById('entryGate');
+      const entryBtn = document.getElementById('entryBtn');
+      if (gate && entryBtn) {
+        function openGate() {
+          startAudio();
+          gate.classList.add('eg-hidden');
+          setTimeout(() => { gate.style.display = 'none'; }, 700);
+        }
+        entryBtn.addEventListener('click', openGate);
+        gate.addEventListener('click', openGate);
+      }
+
+      // Also try autoplay directly (works on some browsers/returning visitors)
+      audio.volume = 0.50;
+      audio.play().then(() => { updateUI(); cleanupListeners(); }).catch(() => {
+        // Autoplay blocked — gate click or interaction listeners will handle it
+        updateUI();
+      });
     }
   </script>
 
