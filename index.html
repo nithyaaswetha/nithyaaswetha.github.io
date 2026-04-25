@@ -93,19 +93,16 @@
 
   <!-- ═══ ENTRY GATE — tap to open invitation & start music ═══ -->
   <div id="entryGate" class="entry-gate">
+    <!-- Atmospheric Orbs -->
+    <div class="eg-orbs" aria-hidden="true">
+      <div class="eg-orb eg-orb--1"></div>
+      <div class="eg-orb eg-orb--2"></div>
+      <div class="eg-orb eg-orb--3"></div>
+    </div>
+
     <div class="eg-content">
-      <div class="eg-mandala" aria-hidden="true">
-        <!-- <svg viewBox="0 0 120 120" width="80" height="80">
-          <circle cx="60" cy="60" r="54" fill="none" stroke="#C8960A" stroke-width="1" opacity=".4">
-            <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="20s"
-              repeatCount="indefinite" />
-          </circle>
-          <circle cx="60" cy="60" r="38" fill="none" stroke="#4A1E6E" stroke-width=".8" opacity=".3">
-            <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="15s"
-              repeatCount="indefinite" />
-          </circle>
-          <circle cx="60" cy="60" r="4" fill="#C8960A" opacity=".6" />
-        </svg> -->
+      <div class="eg-ganesha-wrap" aria-hidden="true">
+        <img src="assets/Element 6.png" alt="Ganesha" class="eg-ganesha">
       </div>
       <p class="eg-couple">Adarsh <span class="eg-amp">Weds</span> Nithyaa Shri</p>
       <p class="eg-date">7 June 2026</p>
@@ -125,6 +122,162 @@
       justify-content: center;
       background: radial-gradient(ellipse at center, #1a0a2e 0%, #0e0620 60%, #070312 100%);
       transition: opacity .6s ease, visibility .6s ease;
+      overflow: hidden;
+    }
+
+    .eg-orbs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .eg-orb {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 150, 10, 0.15) 0%, transparent 70%);
+      filter: blur(20px);
+      animation: egOrbFloat 15s ease-in-out infinite alternate;
+    }
+
+    .eg-orb--1 {
+      width: 300px;
+      height: 300px;
+      top: -50px;
+      left: -50px;
+    }
+
+    .eg-orb--2 {
+      width: 400px;
+      height: 400px;
+      bottom: -100px;
+      right: -100px;
+      animation-duration: 20s;
+      animation-delay: -5s;
+    }
+
+    .eg-orb--3 {
+      width: 250px;
+      height: 250px;
+      top: 40%;
+      left: 60%;
+      background: radial-gradient(circle, rgba(74, 30, 110, 0.12) 0%, transparent 70%);
+      animation-duration: 25s;
+      animation-delay: -10s;
+    }
+
+    @keyframes egOrbFloat {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+
+      to {
+        transform: translate(30px, 30px) scale(1.1);
+      }
+    }
+
+    .eg-ganesha-wrap {
+      margin: 0 auto 32px;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eg-ganesha {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 15px rgba(200, 150, 10, 0.3));
+      animation: egGaneshaFloat 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes egGaneshaFloat {
+      from {
+        transform: translateY(5px);
+      }
+
+      to {
+        transform: translateY(-5px);
+      }
+    }
+
+    .eg-couple {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #F8F2E4;
+      letter-spacing: .04em;
+      margin: 0 0 6px;
+    }
+
+    .eg-amp {
+      color: #C8960A;
+      font-style: italic;
+      margin: 0 6px;
+    }
+
+    .eg-date {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(200, 150, 90, .6);
+      margin: 0 0 32px;
+    }
+
+    .eg-btn {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid rgba(200, 150, 10, .5);
+      color: #C8960A;
+      padding: 14px 40px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background .3s, color .3s, border-color .3s, box-shadow .3s;
+    }
+
+    .eg-btn:hover {
+      background: rgba(200, 150, 10, .12);
+      border-color: #C8960A;
+      box-shadow: 0 0 30px rgba(200, 150, 10, .15);
+    }
+
+    .eg-btn-shimmer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(200, 150, 10, .12) 50%, transparent 60%);
+      animation: egShimmer 2.5s ease infinite;
+    }
+
+    @keyframes egShimmer {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+
+    .eg-btn-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .eg-ganesha-wrap {
+        width: 110px;
+        height: 110px;
+      }
+
+      .eg-couple {
+        font-size: 1.3rem;
+      }
     }
 
     .entry-gate.eg-hidden {
@@ -136,6 +289,8 @@
     .eg-content {
       text-align: center;
       animation: egFadeIn 1s ease .2s both;
+      position: relative;
+      z-index: 10;
     }
 
     @keyframes egFadeIn {
