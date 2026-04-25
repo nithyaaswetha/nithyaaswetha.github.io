@@ -791,14 +791,14 @@
               in Google Maps</a>
           </div>
         </article>
-        <article class="ev-node ev-row1 ev-node--hero scroll-in vis ev-active" style="--sd:.15s" data-idx="1">
+        <article class="ev-node ev-row1 scroll-in vis ev-active" style="--sd:.15s" data-idx="1">
           <div class="ev-icon-wrap"><img src="assets/icon-shaadi.png" alt="Wedding" class="ev-icon" loading="lazy">
             <div class="ev-glow"></div>
           </div>
           <div class="ev-label"><span class="ev-name">Wedding</span><span class="ev-date">7 Jun · 10:30 AM</span></div>
           <div class="ev-detail">
             <p class="ev-venue">The Gitanjali Wedding House</p>
-            <p class="ev-desc">The sacred Saptapadi — seven steps, one lifetime.</p><a
+            <p class="ev-desc">The sacred union — beginning a beautiful chapter of togetherness.</p><a
               href="https://maps.app.goo.gl/T7u9j2UTYvfQCkA87" class="ev-cta">📍 Open
               in Google Maps</a>
           </div>
@@ -807,12 +807,12 @@
           <div class="ev-icon-wrap"><img src="assets/icon-reception.png" alt="Reception" class="ev-icon" loading="lazy">
             <div class="ev-glow"></div>
           </div>
-          <div class="ev-label"><span class="ev-name">Reception</span><span class="ev-date">11 Jun · 7:00 PM</span>
+          <div class="ev-label"><span class="ev-name">Reception</span><span class="ev-date">11 Jun · 6:30 PM</span>
           </div>
           <div class="ev-detail">
             <p class="ev-venue">Hotel Vijayarani, Trichy</p>
-            <p class="ev-desc">Celebrate under the stars with a feast fit for royalty.</p><a
-              href="https://maps.app.goo.gl/2Y5QnFkzFzMmTGSEA" class="ev-cta">📍 Open
+            <p class="ev-desc">Join the Bride’s family for an evening of celebration and shared joy as we welcome the
+              newlyweds.</p><a href="https://maps.app.goo.gl/2Y5QnFkzFzMmTGSEA" class="ev-cta">📍 Open
               in Google Maps</a>
           </div>
         </article>
@@ -825,8 +825,8 @@
           </div>
           <div class="ev-detail">
             <p class="ev-venue">Chennai Darbar Banquet Hall</p>
-            <p class="ev-desc">Celebrate under the stars with a feast fit for royalty.</p><a
-              href="https://maps.app.goo.gl/epsnHAi3RL9n1roe7" class="ev-cta">📍 Open
+            <p class="ev-desc">The Groom’s family cordially invites you to celebrate the beginning of our new journey
+              together.</p><a href="https://maps.app.goo.gl/epsnHAi3RL9n1roe7" class="ev-cta">📍 Open
               in Google Maps</a>
           </div>
         </article>
@@ -1216,7 +1216,11 @@
         <div class="ev-detail">${ev.venue ? `<p class="ev-venue">${ev.venue}</p>` : ''}${ev.desc ? `<p class="ev-desc">${ev.desc}</p>` : ''}${mapsLink}</div>
       </article>`;
         }).join('');
-        setTimeout(() => { evStage.querySelectorAll('.scroll-in').forEach(function (n) { n.classList.add('vis'); }); if (typeof initEventsAutoOpen === 'function') initEventsAutoOpen(); if (typeof window._evJourneyLayout === 'function') window._evJourneyLayout(); }, 120);
+        setTimeout(() => {
+          evStage.querySelectorAll('.scroll-in').forEach(function (n) { n.classList.add('vis'); });
+          if (typeof initEventsAutoOpen === 'function') initEventsAutoOpen();
+          if (typeof window._evJourneyLayout === 'function') window._evJourneyLayout();
+        }, 120);
       }
       if (invite && invite.show === false) { const is = el('invite'); if (is) is.style.display = 'none'; }
       if (story && story.show === false) { const ss = el('story'); if (ss) ss.style.display = 'none'; }
@@ -1304,6 +1308,19 @@
       if (ftD) ftD.textContent = fmt(couple.date) + (couple.venue ? ' · ' + couple.venue : '');
       initMusic();
     })();
+
+    // Make event cards clickable globally
+    document.addEventListener('click', (e) => {
+      const node = e.target.closest('.ev-node');
+      if (node) {
+        const link = node.querySelector('.ev-cta');
+        if (link && !e.target.closest('.ev-cta')) {
+          e.preventDefault();
+          window.open(link.href, '_blank');
+        }
+      }
+    });
+
     if (typeof WEDDING_CONFIG === 'undefined') initMusic();
 
     function initMusic() {

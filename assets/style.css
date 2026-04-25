@@ -2036,10 +2036,14 @@ section {
   --icon-w: 190px;
   display: grid;
   grid-template-columns: repeat(var(--ev-cols, 3), 1fr);
+  justify-content: center;
   grid-template-rows: auto auto;
   column-gap: 0;
   row-gap: 0;
-  padding: 20px 40px 40px
+  padding: 20px 0 40px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1080px
 }
 
 .ev-row1 {
@@ -2066,9 +2070,7 @@ section {
 }
 
 .ev-float-stage[data-ev-count="4"] {
-  max-width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  --ev-cols: 4;
 }
 
 @media(max-width:680px) {
@@ -2086,12 +2088,16 @@ section {
 }
 
 .ev-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   cursor: pointer;
   padding: 8px 12px 16px;
   width: 100%;
   max-width: var(--icon-w);
-  margin: 0 auto
+  margin: 0 auto;
+  min-width: 0;
 }
 
 /* 08 ICON MAGNETIC — CSS part */
@@ -2200,6 +2206,10 @@ section {
 
 .ev-label {
   margin-top: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform .5s var(--bloom)
 }
 
@@ -2229,7 +2239,11 @@ section {
 }
 
 .ev-detail {
-  margin-top: 10px;
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
   transform: translateY(6px);
   max-height: 0;
@@ -2250,7 +2264,7 @@ section {
   letter-spacing: .18em;
   text-transform: uppercase;
   color: rgba(200, 150, 10, .90);
-  margin-bottom: 4px
+  margin-bottom: 12px
 }
 
 .ev-desc {
@@ -2260,7 +2274,11 @@ section {
   line-height: 1.70;
   color: var(--deep);
   opacity: .56;
-  margin-bottom: 8px
+  margin-bottom: 8px;
+  min-height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .ev-cta {
