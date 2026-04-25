@@ -1366,11 +1366,11 @@ section {
 
 .sh-eye {
   display: block;
-  font-weight: 300;
-  font-size: .52rem;
+  font-weight: 600;
+  font-size: .60rem;
   letter-spacing: .40em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: rgba(110, 80, 40, .95);
   margin-bottom: 12px
 }
 
@@ -1862,11 +1862,11 @@ section {
 
 .i-names {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 4px 0 16px;
-  flex-wrap: wrap
+  gap: 0;
+  margin: 10px 0 20px
 }
 
 .i-bride,
@@ -1884,10 +1884,11 @@ section {
 
 .i-amp {
   font-family: var(--ff-d);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--gold);
+  margin: 4px 0;
   opacity: 0;
-  transform: scale(.5) rotate(-15deg);
+  transform: scale(.5);
   transition: opacity .8s var(--bounce) .28s, transform .8s var(--bounce) .28s
 }
 
@@ -2259,11 +2260,11 @@ section {
 }
 
 .ev-venue {
-  font-size: .54rem;
-  font-weight: 300;
+  font-size: .62rem;
+  font-weight: bold;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(200, 150, 10, .90);
+  color: rgba(110, 80, 40, .95);
   margin-bottom: 12px
 }
 
@@ -2283,7 +2284,7 @@ section {
 
 .ev-cta {
   display: inline-block;
-  font-size: .48rem;
+  font-size: .58rem;
   font-weight: 300;
   letter-spacing: .24em;
   text-transform: uppercase;
@@ -3693,7 +3694,7 @@ section {
   font-family: var(--ff-b);
   font-weight: 300;
   font-size: .76rem;
-  color: var(--deep);
+  color: var(--ivory);
   line-height: 1.7
 }
 
