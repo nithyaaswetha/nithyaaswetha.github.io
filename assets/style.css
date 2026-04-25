@@ -3694,7 +3694,7 @@ section {
   font-family: var(--ff-b);
   font-weight: 300;
   font-size: .76rem;
-  color: var(--ivory);
+  color: rgba(232, 200, 144, 1);
   line-height: 1.7
 }
 
